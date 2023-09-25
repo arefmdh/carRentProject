@@ -1,0 +1,953 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+/* Root Variable */
+:root {
+  --primary-color: #3563e9;
+  --background-color: #f6f7f9;
+  --title-color: #1a202c;
+  --white-color: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body,
+button,
+a {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--background-color);
+}
+
+h1,
+h2,
+h4 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+h2 {
+  font-size: 2rem;
+  color: var(--title-color);
+}
+h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+h4 {
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Buttons */
+.btn {
+  cursor: pointer;
+  width: 10rem;
+  height: 3.6rem;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+.btn h5 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 100%;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 10px 1px rgb(32, 31, 31);
+}
+.btn h5:hover {
+  transform: scale(1.07);
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    width: 11.6rem;
+    height: 4.4rem;
+  }
+}
+
+/* Ad Section */
+.ads {
+  display: flex;
+  overflow-x: auto;
+}
+.ad {
+  max-width: 32.7rem;
+  min-height: 23.2rem;
+  border-radius: 10px;
+  padding: 1.6rem 1.6rem 0 0;
+}
+.ad--one {
+  margin-left: 2.4rem;
+  background-color: #54a6ff;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #54a6ff 25px
+    ),
+    repeating-linear-gradient(#9bcbff55, #9bcbff);
+}
+.ad--one .ad--one__img img,
+.ad--two .ad--two__img img {
+  width: 19.6rem;
+  height: 5.6rem;
+  margin: 0 7.8rem 0.4rem 5.3rem;
+}
+.ad--one__text,
+.ad--two__text {
+  color: var(--white-color);
+  margin-left: 1.6rem;
+}
+.ad--one__text__explanation h5,
+.ad--two__text__explanation h5 {
+  max-width: 21.6rem;
+  font-weight: 500;
+  margin: 1.2rem 0 1.6rem 0;
+}
+
+.ad--one__btn,
+.ad--two__btn {
+  width: 12.8rem;
+  height: 4.4rem;
+  margin-bottom: 2.6rem;
+  margin-left: 1.6rem;
+}
+.ad--two {
+  margin: 0 2.4rem;
+  background-color: #3563e9;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 120 120'%3E%3Cpolygon fill='%2340A1E9' points='120 0 120 60 90 30 60 0 0 0 0 0 60 60 0 120 60 120 90 90 120 60 120 0'/%3E%3C/svg%3E");
+}
+.ad--two__btn {
+  background-color: #54a6ff;
+}
+
+@media screen and (min-width: 1024px) {
+  .ads {
+    align-items: center;
+    justify-content: center;
+  }
+  .ad {
+    padding-top: 2.4rem;
+    min-width: 64rem;
+    min-height: 36rem;
+  }
+  .ad h3 {
+    max-width: 28rem;
+    font-size: 3.2rem;
+  }
+  .ad--one__text__explanation h5,
+  .ad--two__text__explanation h5 {
+    margin: 1.6rem 0 2rem 0;
+    max-width: 29rem;
+    font-size: 1.6rem;
+  }
+  .ad--one .ad--one__img img,
+  .ad--two .ad--two__img img {
+    min-width: 34rem;
+    min-height: 10.8rem;
+    margin: 0 11.3rem 2rem 18.7rem;
+  }
+  .ad--one__text,
+  .ad--two__text {
+    margin-left: 2.4rem;
+  }
+  .ad--one__btn,
+  .ad--two__btn {
+    margin-left: 2.4rem;
+  }
+}
+
+/* Header */
+header {
+  padding: 3.2rem 2.4rem 0 2.4rem;
+  background-color: var(--white-color);
+  margin-bottom: 3.2rem;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header .header__logo h1 {
+  color: #3563e9;
+  cursor: pointer;
+}
+header .header__options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .header__options .header__options__profile {
+  cursor: pointer;
+}
+.search {
+  width: 100%;
+  margin-top: 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.2rem;
+}
+.search .search__bar {
+  width: 26.3rem;
+  height: 4.8rem;
+  border: solid 1px #c3d4e966;
+  border-radius: 10px;
+  margin-right: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+.search .search__filter {
+  width: 4.8rem;
+  height: 4.8rem;
+  border: solid 1px #c3d4e966;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.search__bar img {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 2.6rem;
+}
+.search__filter img {
+  width: 2.7rem;
+  height: 2.7rem;
+  transition: 0.1s all ease-in-out;
+}
+.search__bar input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: transparent;
+  padding: 0 1rem;
+  border-radius: 10px;
+}
+.search__bar input:focus {
+  outline: none;
+}
+.search__filter:hover img {
+  transform: scale(1.25);
+}
+.search__bar--filter {
+  display: none;
+}
+.header__options__favorite,
+.header__options__notification,
+.header__options__Setting {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding-top: 0;
+  }
+  .header {
+    display: grid;
+    grid-template-areas: "logo search options options";
+  }
+  .header .header__logo {
+    grid-area: logo;
+    margin-left: 6rem;
+  }
+  .search {
+    display: block;
+    grid-area: search;
+    margin: 4rem 0 4rem 6.4rem;
+  }
+  .header .header__options {
+    grid-area: options;
+    margin-right: 3.2rem;
+  }
+  .search .search__filter {
+    display: none;
+  }
+  .search__bar--filter {
+    display: block;
+    padding-right: 2.2rem;
+    cursor: pointer;
+  }
+  .search .search__bar {
+    width: 49.2rem;
+    height: 4.4rem;
+  }
+  .header__options__favorite,
+  .header__options__notification,
+  .header__options__Setting {
+    display: block;
+    border: solid 1px #c3d4e966;
+    border-radius: 100%;
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 2rem;
+    transition: 0.2s all ease-in-out;
+  }
+  .header__options__favorite:hover,
+  .header__options__notification:hover,
+  .header__options__Setting:hover {
+    transform: scale(1.25);
+  }
+  .header__options__favorite img,
+  .header__options__notification img,
+  .header__options__Setting img {
+    width: 2rem;
+    height: 2rem;
+  }
+  header .header__options .header__options__profile img {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+}
+
+/* Information of rent */
+.rent-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 3.2rem;
+  margin-bottom: 7.2rem;
+}
+.rent-info__option {
+  max-width: 90vw;
+  min-height: 12rem;
+  border-radius: 10px;
+  background-color: var(--white-color);
+}
+.rent-info__title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1.6rem 0 2.4rem 0;
+}
+.rent-info__pick-up {
+  margin-bottom: 3.2rem;
+}
+.rent-info__title h3 {
+  font-weight: 600;
+}
+.rent-info__pick-up__title__circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #3563e9;
+  box-shadow: 0 0 0 4px rgba(53, 99, 233, 0.3);
+  margin: 0 1.2rem 0 2rem;
+}
+.rent-info__drop-off__title__circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: #54a6ff;
+  box-shadow: 0 0 0 4px rgba(92, 175, 252, 0.3);
+  margin: 0 1.2rem 0 2rem;
+}
+.rent-info__options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+.rent-info__options__location {
+  margin-left: 1.5rem;
+}
+.rent-info__options h3 {
+  margin-bottom: 0.8rem;
+}
+.rent-info__options__time {
+  margin-right: 1.5rem;
+  overflow: hidden;
+}
+.rent-info__options__date {
+  padding: 0 1rem;
+  margin: 0 1rem;
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+  border-left: 1px solid rgba(195, 212, 233, 0.4);
+}
+.select-location,
+.select-date,
+.select-time {
+  border: none;
+  outline: none;
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.rent-info__change-btn {
+  position: absolute;
+  top: 39%;
+}
+.rent-info__change-btn .btn {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px 1px rgba(16, 50, 147, 0.32);
+}
+.rent-info__change-btn .btn img {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.select-location:focus {
+  color: #1a202c;
+}
+.select-location option {
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .rent-info {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .rent-info__change-btn {
+    position: static;
+  }
+  .rent-info__pick-up {
+    margin-bottom: 0;
+    margin-right: 4.4rem;
+  }
+  .rent-info__drop-off {
+    margin-left: 4.4rem;
+  }
+  .rent-info__option {
+    min-width: 58.2rem;
+    min-height: 13.6rem;
+  }
+  .rent-info__options__date {
+    padding: 0 2.4rem;
+  }
+  .rent-info__options__location {
+    margin-left: 4.4rem;
+    margin-right: 7.3rem;
+  }
+  .rent-info__options__time {
+    margin-left: 2.4rem;
+    margin-right: 4.4rem;
+  }
+  .rent-info__title {
+    margin-left: 4.4rem;
+  }
+  .rent-info__pick-up__title__circle,
+  .rent-info__drop-off__title__circle {
+    margin-left: 0;
+  }
+  .rent-info__options {
+    justify-content: center;
+  }
+  .select-location,
+  .select-date,
+  .select-time {
+    font-weight: 500;
+  }
+}
+/* container */
+.container {
+  margin: 0 2.4rem;
+}
+@media screen and (min-width: 1024px) {
+  .container {
+    margin: 0 6.4rem;
+  }
+}
+
+/* Popular Cars And Recomendation Cars */
+.Popular-heading,
+.recomendation-heading {
+  color: #90a3bf;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Popular-heading > a > h3 {
+  color: #3563e9;
+}
+.popular {
+  margin-bottom: 3.1rem;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+.recomendation {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2.4rem;
+  align-items: center;
+}
+.popular__car {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 24rem;
+  min-height: 28.6rem;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 1.6rem;
+  margin-right: 2rem;
+}
+.recomendation__car {
+  display: grid;
+  grid-template-areas:
+    "heading heading"
+    "car info"
+    "rent rent";
+  max-width: 32.7rem;
+  height: 24rem;
+  margin-bottom: 2rem;
+  background-color: var(--white-color);
+  border-radius: 10px;
+  padding: 1.6rem;
+}
+.popular__car__head,
+.recomendation__car__head {
+  grid-area: heading;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.popular__car__head > img,
+.recomendation__car__head > img {
+  width: 2rem;
+  height: 2rem;
+}
+.popular__car__head > h5,
+.recomendation__car__head > h5 {
+  min-width: 100%;
+  color: #90a3bf;
+}
+.popular__car > img,
+.recomendation__car > img {
+  width: 18rem;
+  height: 5.6rem;
+  grid-area: car;
+}
+.recomendation__car > img {
+  margin-top: 3.2rem;
+}
+.recomendation__car__info {
+  grid-area: info;
+}
+.popular__car__info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
+}
+.popular__car__info img,
+.recomendation__car__info img {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.popular__car__info--one :nth-child(1)::after,
+.recomendation__car__info--three :nth-child(1)::after,
+.recomendation__car__info--seven :nth-child(1)::after {
+  content: "90L";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 1.8rem;
+}
+.popular__car__info--one :nth-child(2)::after,
+.popular__car__info--two :nth-child(2)::after,
+.popular__car__info--three :nth-child(2)::after,
+.popular__car__info--four :nth-child(2)::after,
+.recomendation__car__info--one :nth-child(2)::after,
+.recomendation__car__info--two :nth-child(2)::after,
+.recomendation__car__info--three :nth-child(2)::after,
+.recomendation__car__info--four :nth-child(2)::after,
+.recomendation__car__info--five :nth-child(2)::after,
+.recomendation__car__info--six :nth-child(2)::after,
+.recomendation__car__info--seven :nth-child(2)::after,
+.recomendation__car__info--eight :nth-child(2)::after {
+  content: "Manual";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 1.8rem;
+}
+.recomendation__car__info--one :nth-child(2),
+.recomendation__car__info--two :nth-child(2),
+.recomendation__car__info--three :nth-child(2),
+.recomendation__car__info--four :nth-child(2),
+.recomendation__car__info--five :nth-child(2),
+.recomendation__car__info--six :nth-child(2),
+.recomendation__car__info--seven :nth-child(2),
+.recomendation__car__info--eight :nth-child(2) {
+  margin: 1.6rem 0;
+}
+.popular__car__info--one :nth-child(3)::after,
+.popular__car__info--two :nth-child(3)::after,
+.popular__car__info--four :nth-child(3)::after {
+  content: "2 People";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.popular__car__info--two :nth-child(1)::after,
+.popular__car__info--four :nth-child(1)::after,
+.recomendation__car__info--two :nth-child(1)::after,
+.recomendation__car__info--four :nth-child(1)::after,
+.recomendation__car__info--six :nth-child(1)::after,
+.recomendation__car__info--eight :nth-child(1)::after {
+  content: "80L";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 1.8rem;
+}
+.popular__car__info--three :nth-child(1)::after,
+.recomendation__car__info--one :nth-child(1)::after,
+.recomendation__car__info--five :nth-child(1)::after {
+  content: "70L";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-right: 1.8rem;
+}
+.popular__car__info--three :nth-child(3)::after,
+.recomendation__car__info--five :nth-child(3)::after,
+.recomendation__car__info--seven :nth-child(3)::after {
+  content: "4 People";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.recomendation__car__info--one :nth-child(3)::after,
+.recomendation__car__info--two :nth-child(3)::after,
+.recomendation__car__info--three :nth-child(3)::after,
+.recomendation__car__info--four :nth-child(3)::after,
+.recomendation__car__info--six :nth-child(3)::after,
+.recomendation__car__info--eight :nth-child(3)::after {
+  content: "6 People";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.recomendation__car__rent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: rent;
+  position: relative;
+}
+.popular__car__rent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+.popular__car__info--two ~ .popular__car__rent > h5 {
+  margin-bottom: 0.8rem;
+}
+.recomendation__car__info--one ~ .recomendation__car__rent > h5,
+.recomendation__car__info--five ~ .recomendation__car__rent > h5 {
+  margin-bottom: 1.5rem;
+}
+.popular__car__rent > h5::after,
+.recomendation__car__rent > h5::after {
+  content: "day";
+  color: #90a3bf;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 0.2rem;
+  margin-right: 1.6rem;
+}
+.popular__car__info--two ~ .popular__car__rent::after,
+.popular__car__info--four ~ .popular__car__rent::after {
+  content: "$100.00";
+  color: #90a3bf;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-decoration: line-through;
+}
+.recomendation__car__info--one ~ .recomendation__car__rent::after,
+.recomendation__car__info--five ~ .recomendation__car__rent::after {
+  content: "$80.00";
+  color: #90a3bf;
+  font-size: 1rem;
+  font-weight: 500;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-decoration: line-through;
+  margin-bottom: 1.3rem;
+}
+.recomendation__more {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 4.8rem 0;
+}
+.recomendation__more > .btn {
+  width: 12rem;
+  margin-left: 10.4rem;
+}
+.recomendation__more > h4 {
+  color: #90a3bf;
+}
+@media screen and (min-width: 1024px) {
+  .popular {
+    margin-bottom: 4.2rem;
+  }
+  .recomendation {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 0 0 6.4rem;
+  }
+  .recomendation__car {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 30.4rem;
+    min-height: 38.8rem;
+    background-color: var(--white-color);
+    margin-right: 3.2rem;
+  }
+  .recomendation__car__info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .popular__car {
+    min-width: 30.4rem;
+    min-height: 38.8rem;
+    padding: 2.4rem;
+    margin-right: 3.2rem;
+  }
+  .popular__car__info img,
+  .recomendation__car__info img {
+    width: 2rem;
+    height: 2rem;
+  }
+  .popular__car__info--one :nth-child(1)::after,
+  .popular__car__info--one :nth-child(2)::after,
+  .popular__car__info--one :nth-child(3)::after,
+  .popular__car__info--one :nth-child(4)::after,
+  .popular__car__info--two :nth-child(1)::after,
+  .popular__car__info--two :nth-child(2)::after,
+  .popular__car__info--two :nth-child(3)::after,
+  .popular__car__info--two :nth-child(4)::after,
+  .popular__car__info--three :nth-child(1)::after,
+  .popular__car__info--three :nth-child(2)::after,
+  .popular__car__info--three :nth-child(3)::after,
+  .popular__car__info--three :nth-child(4)::after,
+  .popular__car__info--four :nth-child(1)::after,
+  .popular__car__info--four :nth-child(2)::after,
+  .popular__car__info--four :nth-child(3)::after,
+  .popular__car__info--four :nth-child(4)::after,
+  .recomendation__car__info--one :nth-child(1)::after,
+  .recomendation__car__info--one :nth-child(2)::after,
+  .recomendation__car__info--one :nth-child(3)::after,
+  .recomendation__car__info--one :nth-child(4)::after,
+  .recomendation__car__info--two :nth-child(1)::after,
+  .recomendation__car__info--two :nth-child(2)::after,
+  .recomendation__car__info--two :nth-child(3)::after,
+  .recomendation__car__info--two :nth-child(4)::after,
+  .recomendation__car__info--three :nth-child(1)::after,
+  .recomendation__car__info--three :nth-child(2)::after,
+  .recomendation__car__info--three :nth-child(3)::after,
+  .recomendation__car__info--three :nth-child(4)::after,
+  .recomendation__car__info--four :nth-child(1)::after,
+  .recomendation__car__info--four :nth-child(2)::after,
+  .recomendation__car__info--four :nth-child(3)::after,
+  .recomendation__car__info--four :nth-child(4)::after,
+  .recomendation__car__info--five :nth-child(1)::after,
+  .recomendation__car__info--five :nth-child(2)::after,
+  .recomendation__car__info--five :nth-child(3)::after,
+  .recomendation__car__info--five :nth-child(4)::after,
+  .recomendation__car__info--six :nth-child(1)::after,
+  .recomendation__car__info--six :nth-child(2)::after,
+  .recomendation__car__info--six :nth-child(3)::after,
+  .recomendation__car__info--six :nth-child(4)::after,
+  .recomendation__car__info--seven :nth-child(1)::after,
+  .recomendation__car__info--seven :nth-child(2)::after,
+  .recomendation__car__info--seven :nth-child(3)::after,
+  .recomendation__car__info--seven :nth-child(4)::after,
+  .recomendation__car__info--eight :nth-child(1)::after,
+  .recomendation__car__info--eight :nth-child(2)::after,
+  .recomendation__car__info--eight :nth-child(3)::after,
+  .recomendation__car__info--eight :nth-child(4)::after,
+  .popular__car__head h5,
+  .recomendation__car__head h5 {
+    font-size: 1.4rem;
+  }
+  .popular__car__head h3,
+  .popular__car__rent > h5,
+  .recomendation__car__head h3,
+  .recomendation__car__rent > h5 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .popular__car__info--two ~ .popular__car__rent > h5,
+  .popular__car__info--four ~ .popular__car__rent > h5,
+  .recomendation__car__info--one ~ .recomendation__car__rent > h5,
+  .recomendation__car__info--five ~ .recomendation__car__rent > h5 {
+    margin-bottom: 2rem;
+  }
+  .popular__car__info--two ~ .popular__car__rent::after,
+  .popular__car__info--four ~ .popular__car__rent::after {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  .recomendation__car__info--one ~ .recomendation__car__rent::after,
+  .recomendation__car__info--five ~ .recomendation__car__rent::after {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .recomendation__more {
+    margin: 6.4rem 0;
+  }
+  .recomendation__more > .btn {
+    width: 15.6rem;
+    margin-left: 64.2rem;
+  }
+  .recomendation__more > h4 {
+    margin-right: 6.4rem;
+  }
+}
+
+/* Footer */
+.footer__header {
+  margin-bottom: 4.8rem;
+}
+.footer__header h1 {
+  color: #3563e9;
+  cursor: pointer;
+  margin-bottom: 1.6rem;
+}
+.footer__header p {
+  color: #90a3bf;
+  max-width: 21.6rem;
+}
+.footer__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4.8rem 6.5rem;
+  margin-bottom: 3.4rem;
+}
+.footer__options__title h2 {
+  color: #1a202c;
+  margin-bottom: 1.6rem;
+}
+.footer__options ul li a h3 {
+  color: #90a3bf;
+  margin-bottom: 1.4rem;
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+}
+.footer__policy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3.2rem 0;
+  margin-bottom: 2.4rem;
+}
+.footer__policy a h5 {
+  color: #1a202c;
+}
+.footer__options ul li :hover {
+  color: var(--primary-color);
+}
+@media screen and (min-width: 1024px) {
+  footer {
+    background-color: var(--white-color);
+  }
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 8rem;
+    gap: 0 45.2rem;
+  }
+  .footer__header p {
+    color: #13131399;
+    max-width: 29.2rem;
+  }
+  .footer__options ul li a h3 {
+    color: #13131399;
+    margin-bottom: 2.5rem;
+  }
+  .footer__options__title h2 {
+    margin-bottom: 3.4rem;
+  }
+  .footer__policy {
+    display: grid;
+    grid-template-areas: "email privacy terms";
+    margin-bottom: 6rem;
+    grid-template-columns: minmax(30rem, 97rem) 23rem auto;
+    padding-top: 3.6rem;
+    border-top: 1px solid #13131329;
+  }
+  .footer__policy :nth-child(3) {
+    grid-area: email;
+  }
+  .footer__policy :nth-child(2) {
+    grid-area: terms;
+  }
+  .footer__policy :nth-child(1) {
+    grid-area: privacy;
+  }
+}

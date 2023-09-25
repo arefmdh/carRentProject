@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Car Rent</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header__logo"><h1>MORENT</h1></div>
+        <div class="header__options">
+          <div class="header__options__favorite">
+            <img
+              src="./Assets/images/favorite-svgrepo-com.svg"
+              alt="favorite"
+            />
+          </div>
+          <div class="header__options__notification">
+            <img
+              src="./Assets/images/notification-bell-new-svgrepo-com.svg"
+              alt="Notif"
+            />
+          </div>
+          <div class="header__options__Setting">
+            <img
+              src="./Assets/images/setting-2-svgrepo-com.svg"
+              alt="Settings"
+            />
+          </div>
+          <div class="header__options__profile">
+            <img src="./Assets/images/Imageprofile.svg" alt="Profile" />
+          </div>
+        </div>
+        <div class="search">
+          <div class="search__bar">
+            <img
+              src="./Assets/images/search-alt-svgrepo-com.svg"
+              alt="search"
+            />
+            <input
+              type="text"
+              id="search"
+              placeholder="Search something here"
+            />
+            <div class="search__bar--filter">
+              <img
+                src="./Assets/images/filter-edit-svgrepo-com.svg"
+                alt="filter"
+              />
+            </div>
+          </div>
+          <div class="search__filter">
+            <img
+              src="./Assets/images/filter-edit-svgrepo-com.svg"
+              alt="filter"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="ads">
+      <div class="ad ad--one">
+        <div class="ad--one__text">
+          <div class="ad--one__text__title">
+            <h3>The Best Platform for Car Rental</h3>
+          </div>
+          <div class="ad--one__text__explanation">
+            <h5>
+              Ease of doing a car rental safely and reliably. Of course at a low
+              price.
+            </h5>
+          </div>
+        </div>
+        <button class="ad--one__btn btn">
+          <a href="#">
+            <h5>Rent Car</h5>
+          </a>
+        </button>
+        <div class="ad--one__img">
+          <img src="./Assets/images/image 7.svg" alt="Car" />
+        </div>
+      </div>
+      <div class="ad ad--two">
+        <div class="ad--two__text">
+          <div class="ad--two__text__title">
+            <h3>Easy way to rent a car at a low price</h3>
+          </div>
+          <div class="ad--two__text__explanation">
+            <h5>
+              Providing cheap car rental services and safe and comfortable
+              facilities.
+            </h5>
+          </div>
+        </div>
+        <button class="ad--two__btn btn">
+          <a href="#">
+            <h5>Rent Car</h5>
+          </a>
+        </button>
+        <div class="ad--two__img">
+          <img src="./Assets/images/image 8.svg" alt="Car" />
+        </div>
+      </div>
+    </section>
+
+    <div class="rent-info">
+      <div class="rent-info__option rent-info__pick-up">
+        <div class="rent-info__title">
+          <div class="rent-info__pick-up__title__circle"></div>
+          <h3>Pick-Up</h3>
+        </div>
+        <div class="rent-info__options">
+          <div class="rent-info__options__location">
+            <h3>Location</h3>
+            <select name="location" class="select-location">
+              <option value="location">Semarang</option>
+              <option value="location">Berlin</option>
+              <option value="location">Paris</option>
+            </select>
+          </div>
+          <div class="rent-info__options__date">
+            <h3>Date</h3>
+            <input class="select-date" type="date" value="2022-03-20" />
+          </div>
+          <div class="rent-info__options__time">
+            <h3>Time</h3>
+            <input type="time" class="select-time" value="07:00" />
+          </div>
+        </div>
+      </div>
+      <div class="rent-info__change-btn">
+        <button class="btn">
+          <a href="#"
+            ><img src="./Assets/images/exchange-svgrepo-com.svg" alt="change"
+          /></a>
+        </button>
+      </div>
+      <div class="rent-info__option rent-info__drop-off">
+        <div class="rent-info__title">
+          <div class="rent-info__drop-off__title__circle"></div>
+          <h3>Drop-Off</h3>
+        </div>
+        <div class="rent-info__options">
+          <div class="rent-info__options__location">
+            <h3>Location</h3>
+            <select name="location" class="select-location">
+              <option value="location">Semarang</option>
+              <option value="location">Berlin</option>
+              <option value="location">Paris</option>
+            </select>
+          </div>
+          <div class="rent-info__options__date">
+            <h3>Date</h3>
+            <input class="select-date" type="date" value="2022-03-21" />
+          </div>
+          <div class="rent-info__options__time">
+            <h3>Time</h3>
+            <input type="time" class="select-time" value="13:00" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Popular-heading container">
+      <h3>Popular Car</h3>
+      <a href="#"><h3>View All</h3></a>
+    </div>
+    <div class="popular container">
+      <div class="popular__car">
+        <div class="popular__car__head">
+          <h3>Koenigsegg</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+          <h5>Sport</h5>
+        </div>
+        <img src="./Assets/images/image 7.svg" alt="car" />
+        <div class="popular__car__info popular__car__info--one">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="peaple" />
+          </div>
+        </div>
+        <div class="popular__car__rent">
+          <h5>$99.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="popular__car">
+        <div class="popular__car__head">
+          <h3>Nissan GT - R</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg"
+            alt="favorite"
+          />
+
+          <h5>Sport</h5>
+        </div>
+        <img src="./Assets/images/image 8.svg" alt="car" />
+        <div class="popular__car__info popular__car__info--two">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="peaple" />
+          </div>
+        </div>
+        <div class="popular__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="popular__car">
+        <div class="popular__car__head">
+          <h3>Rolls - Royce</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+
+          <h5>Sedan</h5>
+        </div>
+        <img src="./Assets/images/Car (2).svg" alt="car" />
+        <div class="popular__car__info popular__car__info--three">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="peaple" />
+          </div>
+        </div>
+        <div class="popular__car__rent">
+          <h5>$96.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="popular__car">
+        <div class="popular__car__head">
+          <h3>Nissan GT - R</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg "
+            alt="favorite"
+          />
+
+          <h5>Sport</h5>
+        </div>
+        <img src="./Assets/images/image 8.svg" alt="car" />
+        <div class="popular__car__info popular__car__info--four">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="peaple" />
+          </div>
+        </div>
+        <div class="popular__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="recomendation-heading container">
+      <h3>Recomendation Car</h3>
+    </div>
+    <div class="recomendation">
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>All New Rush</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg"
+            alt="favorite"
+          />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/recomendationCar1.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--one">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$72.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>CR - V</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/Cartwo.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--two">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>All New Terios</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg"
+            alt="favorite"
+          />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/Carthree.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--three">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$74.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>CR - V</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/Carfour.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--four">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>MG ZX Exclusice</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+          <h5>Hatchback</h5>
+        </div>
+        <img src="./Assets/images/Carfive-seven.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--five">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$76.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>New MG ZS</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg"
+            alt="favorite"
+          />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/Carsix.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--six">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>MG ZX Excite</h3>
+
+          <img src="./Assets/images/favorite-svgrepo-com2.svg" alt="favorite" />
+          <h5>Hatchback</h5>
+        </div>
+        <img src="./Assets/images/Carfive-seven.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--seven">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$74.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__car">
+        <div class="recomendation__car__head">
+          <h3>New MG ZS</h3>
+
+          <img
+            src="./Assets/images/favorite-svgrepo-com22.svg"
+            alt="favorite"
+          />
+          <h5>SUV</h5>
+        </div>
+        <img src="./Assets/images/Careight.svg" alt="car" />
+        <div class="recomendation__car__info recomendation__car__info--eight">
+          <div>
+            <img src="./Assets/images/gas-station-svgrepo-com.svg" alt="gas" />
+          </div>
+          <div>
+            <img
+              src="./Assets/images/steering-wheel-svgrepo-com.svg"
+              alt="steering-wheel"
+            />
+          </div>
+          <div>
+            <img src="./Assets/images/people-svgrepo-com.svg" alt="people" />
+          </div>
+        </div>
+        <div class="recomendation__car__rent">
+          <h5>$80.00/</h5>
+          <button class="btn">
+            <a href="#"><h5>Rent Now</h5></a>
+          </button>
+        </div>
+      </div>
+      <div class="recomendation__more">
+        <button class="btn">
+          <a href="#">
+            <h5>Show More Car</h5>
+          </a>
+        </button>
+        <h4>120 Cars</h4>
+      </div>
+    </div>
+    <footer>
+      <div class="footer container">
+        <div class="footer__header">
+          <div class="footer__header__logo"><h1>MORENT</h1></div>
+          <div class="footer__header__explain">
+            <p>
+              Our vision is to provide convenience and help increase your sales
+              business.
+            </p>
+          </div>
+        </div>
+        <div class="footer__options">
+          <div>
+            <div class="footer__options__title"><h2>About</h2></div>
+            <ul>
+              <li>
+                <a href="#"><h3>How it works</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Featured</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Partnership</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Bussiness Relation</h3></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer__options__title"><h2>Socials</h2></div>
+            <ul>
+              <li>
+                <a href="#"><h3>Discord</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Instagram</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Twitter</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Facebook</h3></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer__options__title"><h2>Community</h2></div>
+            <ul>
+              <li>
+                <a href="#"><h3>Events</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Blog</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Podcast</h3></a>
+              </li>
+              <li>
+                <a href="#"><h3>Invite a friend</h3></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__policy">
+          <a href="#"> <h5>Privacy & Policy</h5> </a>
+          <a href="#"> <h5>Terms & Condition</h5> </a>
+          <a href="#">
+            <h5>©2022 MORENT. All rights reserved</h5>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
